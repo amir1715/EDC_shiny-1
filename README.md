@@ -4,6 +4,8 @@ www.edtox.fi
 
 [![DOI](https://zenodo.org/badge/267520245.svg)](https://zenodo.org/badge/latestdoi/267520245)
 
+https://academic.oup.com/bioinformatics/article/38/7/2066/6520808?login=true
+
 ## Description of EDTox
 The EDTox is an R shiny application to predict endocrine disruption potential of a compound  using a machine learning approach based on toxicogenomics data. 
 In this approach, a random walk with restart (RWR) is used on a gene co-expression network stating from the molecular initiating events (MIEs) to expand the list of genes perturbed by a certain chemical. The resulting gene set is then used for fast geneset enrichment analysis (FGSEA). The pathway activation scores obtained from FGSEA are used along with lists of MIEs from known EDCs and negative controls (non-EDCs) to train an elastic net GLM classifier to predict EDC probability of unknown compound from a set of primary perturbing known genes. Validation of the model is performed by k-fold cross-validation. The pipeline also allows an option to use pareto solution to select the optimal proportion of edges from the original network that will be used as input for RWR and the number of genes with highest probability after RWR to be taken into FGSEA.
